@@ -11,7 +11,7 @@ import { NavbarService } from '../services/navbar-service.service';
   styleUrls: ['./app-navbar.component.scss']
 })
 export class AppNavbarComponent implements OnInit {
-  url: string;
+  url: string = '/menu';
 
   constructor(
     private router: Router,

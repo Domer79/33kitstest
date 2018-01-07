@@ -8,7 +8,7 @@ export class Menu
 {
     Id: string;
     Date: Date;
-    Descripttion: string;
+    Description: string;
 }
 
 export class Dish

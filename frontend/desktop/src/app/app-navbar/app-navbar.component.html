@@ -31,7 +31,7 @@
         </div>
       </li>
       <li class="nev-item">
-          <a class="nav-link" *ngIf="url == '/menu'" style="cursor:pointer" (click)="addMenu($event)">Добавить меню</a>
+          <a class="nav-link" *ngIf="url == '/menu' || url == ''" style="cursor:pointer" (click)="addMenu($event)">Добавить меню</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
