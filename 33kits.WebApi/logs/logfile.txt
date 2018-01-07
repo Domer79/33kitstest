@@ -1,0 +1,186 @@
+2018-01-05 21:12:40.2931 | _33kits.WebApi.Controllers.UploadController |  | System.InvalidOperationException: Недопустимая попытка считывания из столбца с порядковым номером "0". С помощью CommandBehavior.SequentialAccess считывание разрешено только из столбцов с порядковым номером "1" и выше.
+   в System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   в System.Data.SqlClient.SqlDataReader.GetStream(Int32 i)
+   в _33Kits.DataRepository.BinaryHelper.<GetBinaryDataModel>d__2.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\BinaryHelper.cs:строка 50
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 75
+2018-01-05 21:21:16.7746 | _33kits.WebApi.Controllers.UploadController |  | System.ArgumentException: Путь содержит недопустимые знаки.
+   в System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   в System.IO.Path.GetExtension(String path)
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 78
+2018-01-05 21:22:11.6763 | _33kits.WebApi.Controllers.UploadController |  | System.ArgumentException: Путь содержит недопустимые знаки.
+   в System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   в System.IO.Path.GetExtension(String path)
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 78
+2018-01-05 22:08:19.0040 | _33kits.WebApi.Controllers.UploadController |  | System.ObjectDisposedException: Доступ к закрытому потоку невозможен.
+   в System.IO.Stream.CopyTo(Stream destination)
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 77
+2018-01-05 22:09:04.0428 | _33kits.WebApi.Controllers.UploadController |  | System.ObjectDisposedException: Доступ к закрытому потоку невозможен.
+   в System.IO.Stream.CopyTo(Stream destination)
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 77
+2018-01-05 23:25:02.7121 | _33kits.WebApi.Controllers.UploadController |  | System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в _33kits.WebApi.Controllers.UploadController.<GetFile>d__4.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 80
+2018-01-06 03:55:26.0426 | _33kits.WebApi.Controllers.ImagesController |  | System.ObjectDisposedException: Доступ к закрытому потоку невозможен.
+   в System.IO.__Error.StreamIsClosed()
+   в System.IO.MemoryStream.get_Length()
+   в _33kits.WebApi.Controllers.ImagesController.GetResize70Image(Guid id) в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\ImagesController.cs:строка 42
+2018-01-06 14:28:56.9411 | _33kits.WebApi.Controllers.UploadController |  | System.IO.IOException: Unexpected end of MIME multipart stream. MIME multipart message is not complete.
+   в System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.<ParseBuffer>d__0.MoveNext()
+   в System.Net.Http.HttpContentMultipartExtensions.<MultipartReadAsync>d__8.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   в _33kits.WebApi.Controllers.UploadController.<File>d__3.MoveNext() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\FileUploadController.cs:строка 44
+2018-01-06 17:14:59.3540 | _33kits.WebApi.Controllers.MenuController |  | System.ArgumentException: Ключевое слово не поддерживается: "select * from menuonday m inner join (select d.*, md.iddish from menudish md inner join dish d on md.iddish".
+   в System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   в System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   в System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   в System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   в System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   в System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   в System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   в System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   в Orm.CommonDb.Query[T1,T2,TReturn](String query, Func`3 p, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 79
+   в _33Kits.DataRepository.MenuOnDayRepository.Get() в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\MenuOnDayRepository.cs:строка 31
+   в _33kits.WebApi.Controllers.MenuController.Get() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\MenuController.cs:строка 29
+2018-01-06 20:46:49.5777 | _33kits.WebApi.Controllers.DishController |  | System.Data.SqlClient.SqlException (0x80131904): The multi-part identifier "d.id" could not be bound.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 1053
+   в Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext() в C:\projects\dapper\Dapper\SqlMapper.cs:строка 1081
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 723
+   в Orm.CommonDb.Query[T](String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 34
+   в _33Kits.DataRepository.DishRepository.Get(Guid id) в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\DishRepository.cs:строка 24
+   в _33kits.WebApi.Controllers.DishController.GetById(Guid id) в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\DishController.cs:строка 45
+ClientConnectionId:d3a4f292-4c25-4d11-879c-9f070e8a37cd
+Error Number: 4104, State: 1, Class: 16
+2018-01-07 03:23:28.9803 | _33kits.WebApi.Controllers.MenuController |  | System.Data.SqlClient.SqlException (0x80131904): This day the menu is already exist
+The transaction ended in the trigger. The batch has been aborted.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в _33Kits.DataRepository.MenuOnDayRepository.Create(MenuOnDay entity) в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\MenuOnDayRepository.cs:строка 47
+   в _33kits.WebApi.Controllers.MenuController.Post(MenuOnDay value) в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\MenuController.cs:строка 61
+ClientConnectionId:6d0f5403-ba84-4dfa-a973-4a815cd083aa
+Error Number: 50001, State: 1, Class: 16
+2018-01-07 03:34:28.5082 | _33kits.WebApi.Controllers.MenuController |  | System.Data.SqlClient.SqlException (0x80131904): This day the menu is already exist
+The transaction ended in the trigger. The batch has been aborted.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в _33Kits.DataRepository.MenuOnDayRepository.Create(MenuOnDay entity) в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\MenuOnDayRepository.cs:строка 47
+   в _33kits.WebApi.Controllers.MenuController.Post(MenuOnDay value) в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\MenuController.cs:строка 61
+ClientConnectionId:a6c015c9-7e40-47df-8562-8f1555630b8f
+Error Number: 50001, State: 1, Class: 16
+2018-01-07 03:47:10.5219 | _33kits.WebApi.Controllers.MenuController |  | System.Data.SqlClient.SqlException (0x80131904): This day the menu is already exist
+The transaction ended in the trigger. The batch has been aborted.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в _33Kits.DataRepository.MenuOnDayRepository.Create(MenuOnDay entity) в C:\Users\Domer\source\repos\33kitsTest\33Kits.DataRepository\MenuOnDayRepository.cs:строка 41
+   в _33kits.WebApi.Controllers.MenuController.Post(MenuOnDay value) в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\MenuController.cs:строка 61
+ClientConnectionId:f7b54734-e700-4873-9cf0-7bf19bfb03f3
+Error Number: 50001, State: 1, Class: 16
+2018-01-07 07:14:27.8782 | _33kits.WebApi.Controllers.SystemController |  | System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MenuOnDay'.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в Migrator.Migrator.Up(MigrationInfo migrationInfo) в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 87
+   в Migrator.Migrator.Up() в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 31
+   в _33kits.WebApi.Controllers.SystemController.MigrationUp() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\SystemController.cs:строка 31
+ClientConnectionId:1db31f74-3dec-4ff9-81fe-b4fcfcaafb6d
+Error Number: 208, State: 1, Class: 16
+2018-01-07 07:25:42.6535 | _33kits.WebApi.Controllers.SystemController |  | System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'count'.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в Migrator.Migrator.Up(MigrationInfo migrationInfo) в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 86
+   в Migrator.Migrator.Up() в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 30
+   в _33kits.WebApi.Controllers.SystemController.MigrationUp() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\SystemController.cs:строка 31
+ClientConnectionId:fbbca640-afb7-4617-a32c-f4d651a173dd
+Error Number: 207, State: 1, Class: 16
+2018-01-07 07:29:27.6883 | _33kits.WebApi.Controllers.SystemController |  | System.Data.SqlClient.SqlException (0x80131904): You must specify 'REPLACE' to overwrite an existing message.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 2827
+   в Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 570
+   в Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) в C:\projects\dapper\Dapper\SqlMapper.cs:строка 443
+   в Orm.CommonDb.ExecuteNonQuery(String query, Object parameters) в C:\Users\Domer\source\repos\33kitsTest\Orm\CommonDb.cs:строка 50
+   в Migrator.Migrator.Up(MigrationInfo migrationInfo) в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 86
+   в Migrator.Migrator.Up() в C:\Users\Domer\source\repos\33kitsTest\Migrator\Migrator.cs:строка 30
+   в _33kits.WebApi.Controllers.SystemController.MigrationUp() в C:\Users\Domer\source\repos\33kitsTest\33kits.WebApi\Controllers\SystemController.cs:строка 31
+ClientConnectionId:6acd4169-0228-452e-9e68-826ed253d18c
+Error Number: 15043, State: 1, Class: 16

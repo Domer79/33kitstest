@@ -1,0 +1,24 @@
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Дата</th>
+        <th scope="col">Описание</th>
+        <th scope="col">Список блюд</th>
+        <th scope="col">Добавить блюда</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menu of menus">
+        <td>{{menu.Date | date : "dd.MM.yyyy" }}</td>
+        <td>{{menu.Description}}</td>
+        <td><menu-dish-list [menu]="menu"></menu-dish-list></td>
+        <td>
+          <a class="nav-link" style="cursor:pointer" (click)="addDishes(menu)">Добавить блюда</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <add-menu></add-menu> -->

@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h4 class="modal-title">Modal title</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class=form-group>
+      <label for="menuDate">Дата меню</label>
+      <div class="input-group">
+        <input class="form-control" placeholder="Введите день меню" name="menuDate" [(ngModel)]="menu.Date" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+            <!-- <img src="icons/svg/calendar.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" /> -->
+            <i class="material-icons">date_range</i>
+          </button>
+        </div>
+      </div>
+      <label for="description">Описание</label>
+      <div class="input-group">
+          <input type="text" class="form-control" name="description" placeholder="Описание меню" aria-label="Описание меню" [(ngModel)]="menu.Description">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('cancel')">Отменить</button>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(menu)">Сохранить</button>
+</div>

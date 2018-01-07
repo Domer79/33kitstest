@@ -1,0 +1,20 @@
+<div class="container">
+  <form  name="form1" method="post" enctype="multipart/form-data" action="{{uri}}/files/upload">
+      <div class="form-group">
+          <label for="filecaption">Image Caption</label>
+          <input name="filecaption" type="text" />
+      </div>
+      <div class="form-group">
+          <label for="image1">Image File</label>
+          <input name="image1" type="file" (change)="fileChange($event)" multiple />
+      </div>
+      <div class="form-group">
+          <input type="submit" value="Submit" (click)="filesubmit($event)" />
+      </div>
+  </form>
+
+  <div>
+      <img *ngFor="let fileinfo of fileinfos" src="{{uri}}/files/{{fileinfo.Id}}/getfile" />
+      <a href="{{uri}}/files/A171F326-24EA-46DF-82DC-E80400C89BD2/getfile">Get (596419AE-01CB-47EF-B24F-1AB3C3D3E147) File</a>
+  </div>
+</div>
